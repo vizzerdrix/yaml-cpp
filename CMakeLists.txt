@@ -337,7 +337,7 @@ if (YAML_CPP_INSTALL)
 	install(EXPORT yaml-cpp-targets DESTINATION ${INSTALL_CMAKE_DIR})
 
 	if(UNIX)
-		set(PC_FILE ${CMAKE_BINARY_DIR}/yaml-cpp.pc)
+		set(PC_FILE ${PROJECT_BINARY_DIR}/yaml-cpp.pc)
 		configure_file("yaml-cpp.pc.cmake" ${PC_FILE} @ONLY)
 		install(FILES ${PC_FILE} DESTINATION ${LIB_INSTALL_DIR}/pkgconfig)
 	endif()
